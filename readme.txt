@@ -14,6 +14,8 @@ JM Random Quotes is a WordPress widget that supports adding quotes to a database
 
 JM Random Quotes is GPLv2 licensed. If you make a change please contact me [here](mailto:plugins@gplit.com) if you make any changes so I can possibly add them to the plugin.
 
+JM Random Quotes homepage is located at [gplit.com] (http://gplit.com/wordpress-plugins/jm-random-quotes/).
+
 Features:
 
 * Easy to use configuration page.
