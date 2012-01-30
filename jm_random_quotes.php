@@ -3,7 +3,7 @@
 	Plugin Name: JM Random Quotes
 	Plugin URI: http://gplit.com
 	Description: This plugin will randomly choose a quote from a database of quotes that you add to it.
-	Version: 1.0
+	Version: 1.1
 	Author: Josten Moore
 	Author URI: http://gplit.com
 	License: GPL2
@@ -148,10 +148,13 @@
 			
 			for($i = 0; $i < sizeof($quotes); $i++)
 			{
+				$color = "white";
+				if(($i % 2) == 0) { $color = "LightGrey"; }
+				
 				$quote = $quotes[$i][0];
 				$author = $quotes[$i][1];
 				
-					echo "<tr>";
+					echo "<tr style=\"background-color: $color\">";
 						echo "<td width=\"80%\">$quote</td>";
 						echo "<td width=\"15%\">$author</td>";
 						echo "<td width=\"5%\"><input type=\"radio\" name=\"radio_quotes\" value=\"$i\"/></td>";
