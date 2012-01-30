@@ -3,7 +3,7 @@
 	Plugin Name: JM Random Quotes
 	Plugin URI: http://gplit.com
 	Description: This plugin will randomly choose a quote from a database of quotes that you add to it.
-	Version: 1.1
+	Version: 1.1.01
 	Author: Josten Moore
 	Author URI: http://gplit.com
 	License: GPL2
@@ -31,8 +31,8 @@
 	//The widget display name
 	$jmrq_widget_name = "Random Quotes";
 	
-	//table_name is a global variable the for the name of the table that the quotes are stored in
-	define("table_name", "$wpdb->prefix" . "jmrq_random_quotes");
+	//jmrq_table_name is a global variable the for the name of the table that the quotes are stored in
+	define("jmrq_table_name", "$wpdb->prefix" . "jmrq_random_quotes");
 	
 	class Widget_JM_Random_Quotes extends WP_Widget {
 		function Widget_JM_Random_Quotes() {
@@ -56,7 +56,7 @@
 			global $wpdb;
 			global $jmrq_widget_name;
 			
-			$sql = "SELECT * FROM " . table_name;
+			$sql = "SELECT * FROM " . jmrq_table_name;
 			$tableCount = $wpdb->query($sql);
 			$randNum = rand(0, $tableCount -1);
 			
@@ -86,7 +86,7 @@
 		//As long as the quote and author length is over 1 add the quote and author to the table
 		if(strlen($_POST["quote"]) > 1 && strlen($_POST["author"]) > 1)
 		{
-			$wpdb->insert(table_name, array("quote" => $quote, "author" => $author));
+			$wpdb->insert(jmrq_table_name, array("quote" => $quote, "author" => $author));
 		}
 	}
 	
@@ -99,14 +99,14 @@
 		$row_to_delete = $_POST["radio_quotes"];
 		
 		//Get everything from the quotes table
-		$sql1 = "SELECT * FROM " . table_name;
+		$sql1 = "SELECT * FROM " . jmrq_table_name;
 		
 		//Use the 
 		$quote = $wpdb->get_var($sql1, 0, $row_to_delete);
 		$author = $wpdb->get_var($sql1, 1, $row_to_delete);
 		
 		//Deletion of specified row
-		$wpdb->query(	"DELETE FROM " . table_name . 
+		$wpdb->query(	"DELETE FROM " . jmrq_table_name . 
 						" WHERE quote=\"" . $wpdb->get_var($sql1, 0, $row_to_delete) . "\" AND" .
 						" author=\"" . $wpdb->get_var($sql1, 1, $row_to_delete) . "\"");
 	}
@@ -171,7 +171,7 @@
 	function jmrq_get_quotes()
 	{
 		global $wpdb;
-		$sql = "SELECT * FROM " . table_name;
+		$sql = "SELECT * FROM " . jmrq_table_name;
 		
 		//Stores the total amount of quotes in the database
 		$rowCount = $wpdb->query($sql);
@@ -201,7 +201,7 @@
 	{
 		global $wpdb;
 		
-		$sql = 	"CREATE TABLE IF NOT EXISTS " . table_name . "(
+		$sql = 	"CREATE TABLE IF NOT EXISTS " . jmrq_table_name . "(
 				quote varchar(1000) NOT NULL,
 				author varchar(75) NOT NULL
 				);";
