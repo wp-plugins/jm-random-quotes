@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: josten
 Donate link: http://gplit.com
-Tags: widget, plugin, sidebar, widgets, wordpress
+Tags: widget, plugin, sidebar, widgets, wordpress, random-quotes
 Requires at least: 2.8
 Tested up to: 3.3.1
-Stable tag: 1.1.01
+Stable tag: 1.1.02
 
 A very simple random quotes plugin for WordPress. Supports adding quotes to a database and displaying them randomly in a widget.
 
@@ -65,6 +65,10 @@ You can contact me [here](mailto:plugins@gplit.com)
 = 1.1.01 =
 
 * Bug fix
+
+= 1.1.02 =
+
+* Keyword update
 
 == Upgrade Notice ==
 
