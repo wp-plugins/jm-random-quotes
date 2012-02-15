@@ -3,13 +3,13 @@
 	Plugin Name: JM Random Quotes
 	Plugin URI: http://gplit.com
 	Description: This plugin will randomly choose a quote from a database of quotes that you add to it.
-	Version: 1.1.02
+	Version: 1.1.1
 	Author: Josten Moore
 	Author URI: http://gplit.com
 	License: GPL2
 	*/
 	
-	/*  Copyright 2011  JM Random Quotes  (email : plugins@gplit.com)
+	/*  Copyright 2011  JM Random Quotes  (http://gplit.com/about/contact/)
 
 		This program is free software; you can redistribute it and/or modify
 		it under the terms of the GNU General Public License, version 2, as 

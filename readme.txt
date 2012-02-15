@@ -4,7 +4,7 @@ Donate link: http://gplit.com
 Tags: widget, plugin, sidebar, widgets, wordpress, random-quotes
 Requires at least: 2.8
 Tested up to: 3.3.1
-Stable tag: 1.1.02
+Stable tag: 1.1.1
 
 A very simple random quotes plugin for WordPress. Supports adding quotes to a database and displaying them randomly in a widget.
 
@@ -12,7 +12,7 @@ A very simple random quotes plugin for WordPress. Supports adding quotes to a da
 
 JM Random Quotes is a WordPress widget that supports adding quotes to a database and randomly displaying them in a widget.
 
-JM Random Quotes is GPLv2 licensed. If you make a change please contact me [here](mailto:plugins@gplit.com) if you make any changes so I can possibly add them to the plugin.
+JM Random Quotes is GPLv2 licensed. If you make a change please contact me [here](http://gplit.com/about/contact/) if you make any changes so I can possibly add them to the plugin.
 
 JM Random Quotes homepage is located at http://gplit.com/wordpress-plugins/jm-random-quotes/
 
@@ -45,7 +45,7 @@ Features:
 
 = My question is not answered here, where can I contact you? =
 
-You can contact me [here](mailto:plugins@gplit.com)
+You can contact me [here](http://gplit.com/about/contact/)
 
 == Screenshots ==
 
@@ -69,6 +69,10 @@ You can contact me [here](mailto:plugins@gplit.com)
 = 1.1.02 =
 
 * Keyword update
+
+= 1.1.1 =
+
+* Contact info update
 
 == Upgrade Notice ==
 
